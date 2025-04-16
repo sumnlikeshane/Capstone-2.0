@@ -4,7 +4,7 @@ import SearchBar from "../ui/SearchBar";
 
 const Main = () => {
   return (
-    <div className="bg-black text-white min-h-screen">
+    <div className="text-white min-h-screen">
       <SearchBar/>
       <GameGrid />
     </div>
