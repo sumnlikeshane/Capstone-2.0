@@ -33,7 +33,7 @@ const Header = () => {
           </div>
           
           <div className="flex items-center space-x-6 w-1/3 justify-end">
-            <div className="flex flex-col justify-center ml-3">
+            <div className="flex flex-col justify-center ml-3 border-2 border-gray-300 dark:border-gray-800 rounded-full">
               <input 
                 type="checkbox" 
                 className="light-switch sr-only"

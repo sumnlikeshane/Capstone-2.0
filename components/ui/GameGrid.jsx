@@ -42,7 +42,7 @@ const GameGrid = () => {
         {games.map((game) => (
           <div
             key={game.id}
-            className="bg-gray-900 rounded-lg overflow-hidden hover:bg-purple-900 hover:scale-105 duration-300"
+            className="bg-zinc-200 dark:bg-gray-900 rounded-lg overflow-hidden hover:bg-indigo-400 dark:hover:bg-purple-900 hover:scale-105 duration-300"
           >
             <img
               src={game.background_image}
@@ -50,11 +50,11 @@ const GameGrid = () => {
               className="w-full h-48 object-cover"
             />
             <div className="p-4">
-              <h3 className="text-lg font-semibold text-purple-400 mb-2">{game.name}</h3>
-              <p className="text-sm text-gray-400 mb-2">
+              <h3 className="text-lg font-semibold text-indigo-600 dark:text-purple-400 mb-2">{game.name}</h3>
+              <p className="text-sm text-gray-700 dark:text-gray-400 mb-2">
                 Released: {game.released || "N/A"}
               </p>
-              <div className="flex items-center justify-between text-sm text-gray-300">
+              <div className="flex items-center justify-between text-sm text-gray-800 dark:text-gray-300">
                 <span>Rating: ⭐ {game.rating}</span>
                 <span>{game.metacritic ? `MC: ${game.metacritic}` : ""}</span>
               </div>
@@ -66,15 +66,15 @@ const GameGrid = () => {
       <div className="mt-8 flex justify-center items-center space-x-4">
         <button
           onClick={() => setCurrentPage((prev) => Math.max(prev - 1, 1))}
-          className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition duration-300 disabled:opacity-50"
+          className="bg-indigo-600 dark:bg-purple-600 hover:bg-indigo-700 dark:hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition duration-300 disabled:opacity-50"
           disabled={currentPage === 1}
         >
           <FaArrowLeft/>
         </button>
-        <span className="text-white">Page {currentPage} of {totalPages}</span>
+        <span className="text-black dark:text-white">Page {currentPage} of {totalPages}</span>
         <button
           onClick={() => setCurrentPage((prev) => Math.min(prev + 1, totalPages))}
-          className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition duration-300 disabled:opacity-50"
+          className="bg-indigo-600 dark:bg-purple-600 hover:bg-indigo-700 dark:hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition duration-300 disabled:opacity-50"
           disabled={currentPage === totalPages}
         >
           <FaArrowRight/>
