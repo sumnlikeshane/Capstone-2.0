@@ -1,10 +1,11 @@
 import React from "react";
+import GameGrid from "../ui/GameGrid";
 
-const Main = () => {  
+const Main = () => {
   return (
-    <>
-      <p>Main</p>
-    </>
+    <div className="bg-black text-white min-h-screen">
+      <GameGrid />
+    </div>
   );
 };
 
