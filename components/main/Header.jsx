@@ -1,19 +1,14 @@
 import React from "react";
-import { IoNotifications, IoLogIn } from 'react-icons/io5';
+import { IoNotifications} from 'react-icons/io5';
+
 
 const Header = () => {
   return (
     <div className="bg-black text-white shadow-lg border-b border-gray-800">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <div className="hidden md:flex space-x-8 w-1/3 justify-start">
-            <a href="#" className="text-gray-300 hover:text-purple-500 transition duration-300 font-medium">Games</a>
-            <a href="#" className="text-gray-300 hover:text-purple-500 transition duration-300 font-medium">News</a>
-            <a href="#" className="text-gray-300 hover:text-purple-500 transition duration-300 font-medium">Reviews</a>
-            <a href="#" className="text-gray-300 hover:text-purple-500 transition duration-300 font-medium">Forums</a>
-          </div>
           
-          <div className="flex justify-center w-1/3">
+          <div className="flex justify-center">
             <div className="text-2xl font-bold text-purple-600">
               NEXUS
             </div>

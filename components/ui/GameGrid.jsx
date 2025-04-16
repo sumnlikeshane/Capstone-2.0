@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { FaArrowRight,FaArrowLeft } from "react-icons/fa";
 
 const GameGrid = () => {
   const [games, setGames] = useState([]);
@@ -68,7 +69,7 @@ const GameGrid = () => {
           className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition duration-300 disabled:opacity-50"
           disabled={currentPage === 1}
         >
-          Previous
+          <FaArrowLeft/>
         </button>
         <span className="text-white">Page {currentPage} of {totalPages}</span>
         <button
@@ -76,7 +77,7 @@ const GameGrid = () => {
           className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg transition duration-300 disabled:opacity-50"
           disabled={currentPage === totalPages}
         >
-          Next
+          <FaArrowRight/>
         </button>
       </div>
     </div>
