@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowRight,FaArrowLeft } from "react-icons/fa";
 
+
 const GameGrid = () => {
   const [games, setGames] = useState([]);
   const [loading, setLoading] = useState(true);
@@ -38,6 +39,7 @@ const GameGrid = () => {
 
   return (
     <div className="min-h-screen px-6 py-8 text-white">
+      
       <div className="grid gap-8 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
         {games.map((game) => (
           <div
