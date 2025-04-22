@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
 import { FaArrowRight,FaArrowLeft } from "react-icons/fa";
+import LoadingSkeleton from "./LoadingSkeleton";
 
 
 const GameGrid = () => {
@@ -30,11 +31,7 @@ const GameGrid = () => {
   }, [currentPage]);
 
   if (loading) {
-    return (
-      <div className="text-center text-purple-400 py-20 text-lg">
-        Loading games...
-      </div>
-    );
+    return <LoadingSkeleton/>
   }
 
   return (
