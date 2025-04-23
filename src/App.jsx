@@ -1,43 +1,20 @@
-import React, { useState } from "react";
-import Header from "../components/main/Header";
-import Main from "../components/main/Main";
-import Footer from "../components/main/Footer";
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import HomePage from "../components/main/HomePage";
 import Login from "../components/main/Login";
 import Signup from "../components/main/Signup";
 
 function App() {
-  const [login, setLogin] = useState(false);
-  const [signup, setSignup] = useState(false);
-
-  const handleShowLogin = () => {
-    setSignup(false);
-    setLogin(true);
-  };
-
-  const handleShowSignup = () => {
-    setLogin(false);
-    setSignup(true);
-  };
-
-  const handleBackToHome = () => {
-    setLogin(false);
-    setSignup(false);
-  };
-
   return (
-    <div className="flex flex-col min-h-screen">
-      {login ? (
-        <Login setSignup={handleShowSignup} goBack={handleBackToHome} />
-      ) : signup ? (
-        <Signup setLogin={handleShowLogin} goBack={handleBackToHome} />
-      ) : (
-        <>
-          <Header setLogin={handleShowLogin} />
-          <Main />
-          <Footer />
-        </>
-      )}
-    </div>
+    <Router>
+      <div className="flex flex-col min-h-screen">
+        <Routes>
+          <Route path="/" element={<HomePage />}/>
+          <Route path="/login" element={<Login />} />
+          <Route path="/signup" element={<Signup />} />
+        </Routes>
+      </div>
+    </Router>
   );
 }
 

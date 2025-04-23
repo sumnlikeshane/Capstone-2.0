@@ -6,7 +6,7 @@ const SearchBar = () => {
        <input 
                 type="text" 
                 placeholder="Enter a game to search" 
-                className="bg-gray-300 dark:bg-gray-800 text-gray-800 dark:text-gray-100 px-4 py-2 w-full rounded-lg outline-none border-2 border-gray-300 dark:border-gray-800 focus:border-indigo-500  dark:focus:border-purple-600"
+                className="bg-zinc-100 dark:bg-gray-800 text-gray-400 dark:text-gray-100 px-4 py-2 w-full rounded-lg outline-none border-2 border-zinc-100 dark:border-gray-800 focus:border-indigo-500  dark:focus:border-purple-600"
               />
     </div>
   )

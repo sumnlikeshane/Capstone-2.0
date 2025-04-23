@@ -1,26 +1,24 @@
 import React, { useState } from "react";
-import { ArrowLeft } from "lucide-react"; 
+import { ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
-const Login = ({setSignup, goBack}) => {
+const Login = () => {
+  const navigate = useNavigate();
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
 
-  const handleSignup = () => {
-    setSignup(true);
-  };
-
   return (
     <div className="flex min-h-screen">
-
-      <div className="w-1/2 flex flex-col bg-gray-900 text-white">
-        <div className="flex-grow flex flex-col justify-center items-center px-6">
+      <div className="w-1/2 flex flex-col bg-gray-900 text-white relative">
         <button
-          onClick={goBack}
+          onClick={() => navigate("/")}
           className="absolute top-4 left-4 text-white hover:text-purple-400 flex items-center space-x-2"
         >
           <ArrowLeft size={20} />
           <span>Back</span>
         </button>
+
+        <div className="flex-grow flex flex-col justify-center items-center px-6">
           <div className="w-full max-w-md bg-gray-800 shadow-lg rounded-xl p-8 space-y-6">
             <h2 className="text-3xl font-bold text-center text-purple-500">
               Welcome to Nexus
@@ -50,13 +48,12 @@ const Login = ({setSignup, goBack}) => {
 
             <div className="text-sm text-center text-gray-400 pt-4">
               Don’t have an account?{" "}
-              <a
-                href="#"
+              <button
+                onClick={() => navigate("/signup")}
                 className="text-purple-500 hover:underline font-medium"
-                onClick={handleSignup}
               >
                 Sign up
-              </a>
+              </button>
             </div>
           </div>
         </div>

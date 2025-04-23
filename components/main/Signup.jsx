@@ -1,20 +1,18 @@
 import React, { useState } from "react";
-import { ArrowLeft } from "lucide-react"; 
+import { ArrowLeft } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
-const Signup = ({ setLogin, goBack }) => {
+const Signup = () => {
+  const navigate = useNavigate();
   const [username, setUsername] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
-
-  const handleLogin = () => {
-    setLogin(true);
-  };
 
   return (
     <div className="flex min-h-screen">
       <div className="w-1/2 flex flex-col bg-gray-900 text-white relative">
         <button
-          onClick={goBack}
+          onClick={() => navigate("/")}
           className="absolute top-4 left-4 text-white hover:text-purple-400 flex items-center space-x-2"
         >
           <ArrowLeft size={20} />
@@ -61,13 +59,12 @@ const Signup = ({ setLogin, goBack }) => {
 
             <div className="text-sm text-center text-gray-400 pt-4">
               Already have an account?{" "}
-              <a
-                href="#"
+              <button
+                onClick={() => navigate("/login")}
                 className="text-purple-500 hover:underline font-medium"
-                onClick={handleLogin}
               >
                 Log in
-              </a>
+              </button>
             </div>
           </div>
         </div>

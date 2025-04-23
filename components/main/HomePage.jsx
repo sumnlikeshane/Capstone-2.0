@@ -3,17 +3,20 @@ import GameGrid from "../ui/GameGrid";
 import SearchBar from "../ui/SearchBar";
 import Hero from "../ui/Hero";
 
+import Header from "./Header";
+import Footer from "./Footer";
 
-
-const Main = () => {
+const HomePage = () => {
  
   return (
     <div className="min-h-screen">
+      <Header />
       <Hero/>
       <SearchBar/>
       <GameGrid />
+      <Footer/>
     </div>
   );
 };
 
-export default Main;
+export default HomePage;

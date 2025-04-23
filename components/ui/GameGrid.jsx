@@ -41,7 +41,7 @@ const GameGrid = () => {
         {games.map((game) => (
           <div
             key={game.id}
-            className="bg-zinc-200 dark:bg-gray-900 rounded-lg overflow-hidden hover:bg-indigo-400 dark:hover:bg-purple-900 hover:scale-105 duration-300"
+            className="bg-zinc-100 dark:bg-gray-900 rounded-lg overflow-hidden hover:scale-105 duration-300"
           >
             <img
               src={game.background_image}

@@ -1,9 +1,11 @@
 import React, { useEffect, useState } from "react";
+import { useNavigate } from "react-router-dom";
 import { IoNotifications } from 'react-icons/io5';
 import { FaSun, FaMoon } from 'react-icons/fa';
 
-const Header = ({ setLogin }) => {
+const Header = () => {
   const [darkMode, setDarkMode] = useState(true);
+  const navigate = useNavigate();
 
   useEffect(() => {
     document.documentElement.classList.add('dark');
@@ -22,11 +24,11 @@ const Header = ({ setLogin }) => {
   };
 
   const handleLoginClick = () => {
-    setLogin(true);
+    navigate("/login");
   };
 
   return (
-    <div className="text-gray-800 dark:text-white border-b border-gray-200 dark:border-gray-800">
+    <div className="text-gray-800 dark:text-white border-b border-gray-400 dark:border-gray-800">
       <div className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           <div className="flex justify-center">
@@ -68,6 +70,5 @@ const Header = ({ setLogin }) => {
     </div>
   );
 };
-
 
 export default Header;
