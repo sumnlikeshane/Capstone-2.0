@@ -1,20 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import GameGrid from "../ui/GameGrid";
 import SearchBar from "../ui/SearchBar";
-import Hero from "../ui/Hero";
-
 import Header from "./Header";
 import Footer from "./Footer";
+import ChatWidget from "../ui/ChatWidget";
 
 const HomePage = () => {
- 
+  const [searchQuery, setSearchQuery] = useState("");
   return (
     <div className="min-h-screen">
       <Header />
-      <Hero/>
-      <SearchBar/>
-      <GameGrid />
+      <SearchBar value={searchQuery} onChange={e => setSearchQuery(e.target.value)} />
+      <GameGrid searchQuery={searchQuery} />
       <Footer/>
+      <ChatWidget />
     </div>
   );
 };
