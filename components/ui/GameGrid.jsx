@@ -64,9 +64,12 @@ const GameGrid = ({ searchQuery = "" }) => {
     setSelectedGame(null);
   };
 
-  const filteredGames = games.filter(game =>
-    game.name.toLowerCase().includes(searchQuery.toLowerCase())
-  );
+  // Filter games based on searchQuery
+  const filteredGames = searchQuery.trim() === "" 
+    ? games 
+    : games.filter(game =>
+        game.name.toLowerCase().includes(searchQuery.toLowerCase())
+      );
 
   if (loading) {
     return <LoadingSkeleton />;
