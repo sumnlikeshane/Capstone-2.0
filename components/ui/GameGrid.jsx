@@ -64,7 +64,6 @@ const GameGrid = ({ searchQuery = "" }) => {
     setSelectedGame(null);
   };
 
-  // Filter games based on searchQuery
   const filteredGames = searchQuery.trim() === "" 
     ? games 
     : games.filter(game =>
