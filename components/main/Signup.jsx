@@ -92,7 +92,7 @@ const Signup = () => {
 
       <div className="w-1/2">
         <img
-          src="../../assets/images/Signup.jpg"
+          src="/Signup.jpg"
           alt="Game Collage"
           className="w-full h-full object-cover"
         />

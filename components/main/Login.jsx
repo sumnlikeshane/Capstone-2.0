@@ -82,7 +82,7 @@ const Login = () => {
 
       <div className="w-1/2">
         <img
-          src="../../assets/images/Login.jpg"
+          src="/Login.jpg"
           alt="Game Collage"
           className="w-full h-full object-cover"
         />
