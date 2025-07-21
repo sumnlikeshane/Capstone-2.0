@@ -1,6 +1,5 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
-import { IoNotifications } from 'react-icons/io5';
 import { FaSun, FaMoon, FaUser } from 'react-icons/fa';
 import { useAuth } from "../../src/context/AuthContext"; 
 import { useTheme } from "../../src/context/ThemeContext";
